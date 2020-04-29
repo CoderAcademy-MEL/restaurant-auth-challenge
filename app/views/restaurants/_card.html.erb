@@ -1,0 +1,9 @@
+<div class="card text-center my-3 col-md-4 col-xs-12" style="max-width:30%; min-width:18rem;">
+  <%= image_tag image_for(restaurant) , alt: "#{restaurant.name} image", class: 'card-img-top img_fluid' %>
+  <div class="card-body">
+    <h5 class="card-title"><%= restaurant.name %></h5>
+    <h6 class="card-subtitle mb-2 text-muted"><%= restaurant.cuisine %></h6>
+    <p class="card-text"><%= restaurant.short_description %></p>
+    <%= link_to 'View', restaurant_path(restaurant), class: 'btn btn-primary' %>
+  </div>
+</div>
