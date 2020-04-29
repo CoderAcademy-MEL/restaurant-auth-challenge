@@ -17,6 +17,8 @@ user_two = User.create(email: 'test-user2@restaurant.com', password: 'password')
       description: Faker::Restaurant.description,
       user: user_one
     )
+    num = rand(1..4)
+    r.image.attach(io: File.open("app/assets/images/seed/#{num}.jpg"), filename: "#{num}.jpg", content_type: 'image/jpg')
     puts "#{r.name} created!"
     r = Restaurant.create(
       name: Faker::Restaurant.name,
@@ -25,7 +27,7 @@ user_two = User.create(email: 'test-user2@restaurant.com', password: 'password')
       description: Faker::Restaurant.description,
       user: user_two
     )
+    num = rand(1..4)
+    r.image.attach(io: File.open("app/assets/images/seed/#{num}.jpg"), filename: "#{num}.jpg", content_type: 'image/jpg')
     puts "#{r.name} created!"
 end
-
-
