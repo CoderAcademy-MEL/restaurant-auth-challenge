@@ -1,0 +1,19 @@
+<h1><%= @restaurant.name %></h1>
+<div>
+  <strong>Cuisine:  </strong>
+  <span><%= @restaurant.cuisine %></span>
+</div>
+<div>
+  <strong>Location:  </strong>
+  <span><%= @restaurant.location %></span>
+</div>
+<div>
+  <strong>About:  </strong>
+  <span><%= @restaurant.description %></span>
+</div>
+
+<%= link_to 'Edit', edit_restaurant_path(@restaurant) %>
+
+<%= link_to 'Delete', restaurant_path(@restaurant), method: :delete, data: { confirm: "Really delete #{@restaurant.name}?"} %>
+
+<%= link_to 'Back', restaurants_path %>
