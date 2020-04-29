@@ -1,19 +1,26 @@
-<h1><%= @restaurant.name %></h1>
-<div>
-  <strong>Cuisine:  </strong>
-  <span><%= @restaurant.cuisine %></span>
-</div>
-<div>
-  <strong>Location:  </strong>
-  <span><%= @restaurant.location %></span>
-</div>
-<div>
-  <strong>About:  </strong>
-  <span><%= @restaurant.description %></span>
-</div>
+<div class="row content mt-3">
+  <div class="col-md-4">
+    <%= image_tag image_for(@restaurant) , alt: "#{@restaurant.name} image", class: 'mt-2', style: 'width:100%;' %>
+  </div>
+  <div class="col-md-8">
+    <h1><%= @restaurant.name %></h1>
+    <div>
+      <strong>Cuisine:  </strong>
+      <span><%= @restaurant.cuisine %></span>
+    </div>
+    <div>
+      <strong>Location:  </strong>
+      <span><%= @restaurant.location %></span>
+    </div>
+    <p><%= @restaurant.description %></p>
+    
+    <%= link_to 'Edit', edit_restaurant_path(@restaurant), class: 'btn btn-info'%>
 
-<%= link_to 'Edit', edit_restaurant_path(@restaurant) %>
+    <%= link_to 'Delete', restaurant_path(@restaurant), method: :delete, class: 'btn btn-danger', data: { confirm: "Really delete #{@restaurant.name}?"} %>
 
-<%= link_to 'Delete', restaurant_path(@restaurant), method: :delete, data: { confirm: "Really delete #{@restaurant.name}?"} %>
+    <%= link_to 'Back', restaurants_path, class: 'btn btn-primary' %> 
+  </div>
+ 
 
-<%= link_to 'Back', restaurants_path %>
+  
+</div>
