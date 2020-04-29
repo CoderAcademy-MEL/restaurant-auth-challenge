@@ -3,7 +3,7 @@ module RestaurantsHelper
     if restaurant.image.present?
       restaurant.image
     else
-      'restaurant_default.png'
+      'restaurant_default.jpg'
     end
   end
 end
