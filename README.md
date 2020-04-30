@@ -8,6 +8,16 @@
 4. run `rails db:setup`
 5. open `localhost:3000` in your web browser
 
+## Users
+
+The following users are provided for you in the seeds file. Both test users will each have four attached restaurants randomly generated.
+
+| Login Email               | Password | Admin |
+|:--------------------------|:---------|:------|
+| admin@restaurant.com      | password | true  |
+| test-user1@restaurant.com | password | false |
+| test-user2@restaurant.com | password | false |
+
 ## Challenges
 
 ### Authentication
