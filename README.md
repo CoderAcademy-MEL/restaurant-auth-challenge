@@ -23,8 +23,8 @@ The following users are provided for you in the seeds file. Both test users will
 ### Authentication
 
 - Currently, anyone can edit, delete, or create a restaurant so long as they know the URL. Make it so that only logged in users can access these features.
-- Now that they can't access the views, make it so that they can even see the buttons for those actions if they are not logged in.
 - Not logged in, visitors should still be able to view the index and show pages for restaurants.
+- Now that they can't access the views, make it so that they can't even see the buttons for those actions if they are not logged in.
 
 ### Authorization
 
